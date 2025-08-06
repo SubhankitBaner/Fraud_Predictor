@@ -13,7 +13,7 @@ st.set_page_config(page_title="FraudShield", page_icon="🕵️", layout="center
 
 st.divider()
 
-st.write("Welcome to the FraudShield! This tool leverages machine learning to evaluate financial transactions and identify those that may be potentially fraudulent. By analyzing features such as transaction type, amount, and changes in account balances, the model assesses the risk of each transaction. Built on real-world transaction data, this app offers insights into fraud detection using AI, ideal for educational and demonstration purposes.")
+st.write("Welcome to FraudShield! This tool leverages machine learning to evaluate financial transactions and identify those that may be potentially fraudulent. By analyzing features such as transaction type, amount, and changes in account balances, the model assesses the risk of each transaction. Built on real-world transaction data, this app offers insights into fraud detection using AI, ideal for educational and demonstration purposes.")
 
 st.sidebar.title("ℹ️ About This App")
 st.sidebar.markdown("This application is designed to predict the likelihood of fraud in a financial transaction using key input features like transaction type, transaction amount, and sender/receiver account balances. It provides a real-time fraud risk assessment powered by a classification model trained on publicly available datasets.\n\n"
