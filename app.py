@@ -27,12 +27,46 @@ st.markdown("<h2 style='color:teal;'>Enter Transaction Details Below</h2>", unsa
 st.divider()
 
 
-transaction_type=st.selectbox("Transaction Type",['PAYMENT','TRANSFER','CASH_OUT','CASH_IN','DEBIT'])
-amount = st.number_input("Amount",min_value=0.0,value=1000.0)
-oldbalanceOrg=st.number_input("Old Balance(Sender)",min_value=0.0,value=10000.0)
-newbalanceOrig=st.number_input("New Balance(Sender)",min_value=0.0,value=9000.0)
-oldbalanceDest=st.number_input("Old Balance(Reciever)",min_value=0.0,value=0.0)
-newbalanceDest=st.number_input("New Balance(Reciever)",min_value=0.0,value=0.0)
+transaction_type = st.selectbox(
+    "Select Transaction Type",
+    ['PAYMENT', 'TRANSFER', 'CASH_OUT', 'CASH_IN', 'DEBIT'],
+    help="Choose the type of financial transaction being made."
+)
+
+amount = st.number_input(
+    "Enter Transaction Amount (₹)",
+    min_value=0.0,
+    value=1000.0,
+    help="Specify the amount involved in the transaction."
+)
+
+oldbalanceOrg = st.number_input(
+    "Sender's Account Balance (Before Transaction)",
+    min_value=0.0,
+    value=10000.0,
+    help="Available balance in sender's account before the transaction."
+)
+
+newbalanceOrig = st.number_input(
+    "Sender's Account Balance (After Transaction)",
+    min_value=0.0,
+    value=9000.0,
+    help="Remaining balance in sender's account after the transaction."
+)
+
+oldbalanceDest = st.number_input(
+    "Receiver's Account Balance (Before Transaction)",
+    min_value=0.0,
+    value=0.0,
+    help="Available balance in receiver's account before the transaction."
+)
+
+newbalanceDest = st.number_input(
+    "Receiver's Account Balance (After Transaction)",
+    min_value=0.0,
+    value=0.0,
+    help="Balance in receiver's account after the transaction is complete."
+)
 
 input_df = pd.DataFrame([[transaction_type,amount,oldbalanceOrg, newbalanceOrig, oldbalanceDest,newbalanceDest]],
                         columns=['type','amount','oldbalanceOrg','newbalanceOrig','oldbalanceDest','newbalanceDest'])
