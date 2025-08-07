@@ -1,6 +1,6 @@
 # 🕵️‍♂️ Fraud Detection Predictor
 
-**Fraud Detection Predictor** is a machine learning-based web app that predicts whether a financial transaction is potentially fraudulent. It uses a trained `RandomForestClassifier` on a real-world dataset of over 1.2 million transactions and is built using Python and Streamlit.
+**Fraud Detection Predictor** is a machine learning-based web app that predicts whether a financial transaction is potentially fraudulent. It uses a trained `RandomForestClassifier` on a real-world dataset of over 6.1 million transactions and is built using Python and Streamlit.
 
 ---
 
